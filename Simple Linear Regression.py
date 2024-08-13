@@ -1,37 +1,10 @@
 import pandas as pd
 import numpy as np
 
-#dummy data with one independent variable.
+#Dummy data with one independent variable.
 x = np.random.randn(100)
 #Dependent variable y is linearly dependent on x
-y = 6.01 *x + 12.91
-
-# #Prediction
-# def pred(x, w, b):
-#     return x*w + b
-
-# #Loss function
-# def loss(x,w,b, y):
-#     return np.sum(1/2 * (pred(x, w, b) - y)**2)
-
-# #Gradient 
-# def gradients(x,w,b, y):
-#     dw = np.sum((pred(x,w,b) - y) * x)
-#     db = np.sum(pred(x, w, b) - y)
-
-#     return dw, db
-
-# def fit (x, y, w, b, lr,  iterations):
-#     for i in range(iterations):
-#         l = np.round(loss(x, w,b, y), 2)
-#         print (i, w, b, l)
-#         dw  = gradients(x, w, b, y) [0]
-#         db = gradients(x, w, b, y) [1]
-
-#         w -= dw*lr
-#         b -= db*lr
-
-# fit(x = x, y = y, w = 0.1, b = 0.2, lr = 0.01 ,  iterations = 50)
+y = 6.01 *x + 12.91 + np.random.randn(100)/1000
 
 class LinearRegression:
 
